@@ -1,5 +1,7 @@
 package paquete;
 
+import java.util.Scanner;
+
 public class Ejecuta {
 
 	public static void main(String[] args) {
@@ -10,9 +12,31 @@ como nombre de alumno “fin”. En ese momento mostrará la edad media de los alumno
 el nombre del alumno menor. NOTA: Al introducir como nombre “fin”, no nos ha de pedir el
 año de nacimiento.
  */
-		int i = 0;
-		int b=0;
-		int c=0;
+		String nombre, nMenor="No Existe";
+		int año, suma=0, menor=1000, edad;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Introduce el nombre del alumno:");
+		nombre = sc.nextLine();
+		
+		while(!nombre.equals("fin")){
+			
+			System.out.println("Introduce la fecha de nacimiento del alumno:");
+			año = sc.nextInt();
+			
+			edad = 2021 - año;
+			suma += año;
+			if(edad<menor) {
+				menor = edad;
+				nMenor = nombre;
+			}
+			
+			System.out.println("Introduce el nombre del alumno:");
+			nombre = sc.next();
+			
+		}
+		
+		System.out.println("El nombre del menor alumno es: " + nMenor);
 	}
 
 }
