@@ -11,6 +11,7 @@ el nombre del alumno menor. NOTA: Al introducir como nombre “fin”, no nos ha de 
 año de nacimiento.
  */
 		int i = 0;
+		int b=0;
 	}
 
 }
