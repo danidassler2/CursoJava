@@ -13,7 +13,7 @@ el nombre del alumno menor. NOTA: Al introducir como nombre “fin”, no nos ha de 
 año de nacimiento.
  */
 		String nombre, nMenor="No Existe";
-		int año, suma=0, menor=1000, edad;
+		int año, suma=0, menor=1000, edad, cont=0;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Introduce el nombre del alumno:");
@@ -25,7 +25,8 @@ año de nacimiento.
 			año = sc.nextInt();
 			
 			edad = 2021 - año;
-			suma += año;
+			suma += edad;
+			cont++;
 			if(edad<menor) {
 				menor = edad;
 				nMenor = nombre;
@@ -36,7 +37,12 @@ año de nacimiento.
 			
 		}
 		
+		float media = 0F;
+		
+		if(cont != 0) { media = (float)suma/cont; }
+		
 		System.out.println("El nombre del menor alumno es: " + nMenor);
+		System.out.println("La media de la clase es: " + media + " años");
 	}
 
 }
