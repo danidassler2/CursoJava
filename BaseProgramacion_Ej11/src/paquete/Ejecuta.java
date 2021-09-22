@@ -7,13 +7,13 @@ public class Ejecuta {
 	public static void main(String[] args) {
 		
 /*
- Programa que lee nombre y año de nacimiento de una serie de alumnos hasta introducir
-como nombre de alumno “fin”. En ese momento mostrará la edad media de los alumnos y
-el nombre del alumno menor. NOTA: Al introducir como nombre “fin”, no nos ha de pedir el
-año de nacimiento.
+ Programa que lee nombre y aï¿½o de nacimiento de una serie de alumnos hasta introducir
+como nombre de alumno ï¿½finï¿½. En ese momento mostrarï¿½ la edad media de los alumnos y
+el nombre del alumno menor. NOTA: Al introducir como nombre ï¿½finï¿½, no nos ha de pedir el
+aï¿½o de nacimiento.
  */
 		String nombre, nMenor="No Existe";
-		int año, suma=0, menor=1000, edad, cont=0;
+		int anio, suma=0, menor=1000, edad, cont=0;
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Introduce el nombre del alumno:");
@@ -22,9 +22,9 @@ año de nacimiento.
 		while(!nombre.equals("fin")){
 			
 			System.out.println("Introduce la fecha de nacimiento del alumno:");
-			año = sc.nextInt();
+			anio = sc.nextInt();
 			
-			edad = 2021 - año;
+			edad = 2021 - anio;
 			suma += edad;
 			cont++;
 			if(edad<menor) {
@@ -42,7 +42,7 @@ año de nacimiento.
 		if(cont != 0) { media = (float)suma/cont; }
 		
 		System.out.println("El nombre del menor alumno es: " + nMenor);
-		System.out.println("La media de la clase es: " + media + " años");
+		System.out.println("La media de la clase es: " + media + " aï¿½os");
 	}
 
 }
