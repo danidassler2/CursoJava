@@ -1,5 +1,6 @@
 package paquete;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejecuta {
@@ -23,9 +24,12 @@ solamente los que sean pares. CON ARRAYS
 		}
 		
 		System.out.println("Numeros pares introducidos: ");
+		
 		for(int j = 0; j<arr.length; j++) {
 			if(arr[j]%2 == 0) { System.out.println(arr[j]); }
 		}
+		
+		// para mostrar el contenido de un array: System.out.println(Arrays.toString(arr));
 
 	}
 
